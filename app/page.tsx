@@ -114,7 +114,13 @@ export default function Home() {
   )
 }
 
-function BookCard({ title, description, url }) {
+interface BookCardProps {
+  title: string;
+  description: string;
+  url: string;
+}
+
+function BookCard({ title, description, url }: BookCardProps) {
   return (
     <div className="bg-white p-6 rounded-lg shadow-md">
       <h3 className="font-bold text-xl mb-2">{title}</h3>
